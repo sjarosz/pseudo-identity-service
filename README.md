@@ -3,6 +3,8 @@
 ## Project Overview
 This project provides a Flask-based API that serves identity data from a JSON file. The application can be deployed either as a standalone Docker service or as a Kubernetes-managed service.  Ideal for testing passthrough authentication and OpenICF connector operations for provisioning and reconciliation.
 
+The sample data in data.json, can be modified and the schema can as well.  The sample is just a getting started schema and data.  The only requirement for the schema, is that the users are in the collection of 'users' and that each user has an 'id' attribute.
+
 ## File Descriptions
 
 - **app.py**: Flask application that serves various endpoints for retrieving and managing data.
@@ -28,7 +30,7 @@ This project provides a Flask-based API that serves identity data from a JSON fi
    - Count users
    - Find user
    - Show all users
-   - Issue OAuth2 token
+   - Issue OAuth2 token (ROPC flow)
 
 
 
