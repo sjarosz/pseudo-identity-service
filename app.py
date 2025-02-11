@@ -89,6 +89,12 @@ def get_request_data():
     logging.debug("get_request_data() -> %s", data)
     return data
 
+def require_oauth_token():
+    auth_header = request.headers.get('Authorization')
+    if not auth_header or not auth_header.startswith('Bearer '):
+        return jsonify({"error": "invalid_request", "error_description": "Missing or invalid Authorization header."}), 401
+    return None  # Token is present, continue processing
+
 
 # ------------------------------------------------------------------------------
 # 0) OAuth Token Endpoint
@@ -100,7 +106,7 @@ def oauth_token():
     # Parse Authorization header
     auth_header = request.headers.get('Authorization')
     if not auth_header or not auth_header.startswith('Basic '):
-        return jsonify({"error": "invalid_request", "error_description": "Missing or invalid Authorization header."}), 400
+        return jsonify({"error": "invalid_request", "error_description": "Missing or invalid Authorization header."}), 401
 
     # Decode Base64 credentials
     try:
@@ -108,7 +114,7 @@ def oauth_token():
         credentials = base64.b64decode(base64_credentials).decode('utf-8')
         client_id, client_secret = credentials.split(':')
     except Exception:
-        return jsonify({"error": "invalid_request", "error_description": "Invalid Authorization header format."}), 400
+        return jsonify({"error": "invalid_request", "error_description": "Invalid Authorization header format."}), 401
 
     # Validate grant type and refresh token
     grant_type = request.form.get('grant_type')
@@ -158,6 +164,10 @@ def get_entities():
     - Returns all 'user' elements from the data file.
     - Wraps the response in {"result": <data>, "stat": "ok"}.
     """
+    auth_error = require_oauth_token()
+    if auth_error:
+        return auth_error
+    
     logging.debug("=== [GET /entity] Incoming request ===")
     
     # Extract all 'user' elements
@@ -183,6 +193,10 @@ def entity():
     2. Searches for the first matching entity in store[type_name].
     3. Returns only the requested attributes in {"result": {...}, "stat": "ok"}.
     """
+    auth_error = require_oauth_token()
+    if auth_error:
+        return auth_error
+    
     logging.debug("=== [POST /entity] Incoming request ===")
     data = get_request_data()
 
@@ -242,6 +256,10 @@ def entity_find():
     2. Filters the data based on simple "and"-separated key=value pairs (naive approach).
     3. Returns the filtered records (only requested attributes) in sorted order.
     """
+    auth_error = require_oauth_token()
+    if auth_error:
+        return auth_error
+    
     logging.debug("=== [POST /entity.find] Incoming request ===")
     data = get_request_data()
 
@@ -342,8 +360,12 @@ def entity_count():
     - Optionally, could accept a type_name if needed, but currently doesn't.
     - Returns {"total_count": N, "stat": "ok"}.
     """
+    auth_error = require_oauth_token()
+    if auth_error:
+        return auth_error
+    
+
     logging.debug("=== [POST /entity.count] Incoming request ===")
-    data = get_request_data()  # Not used in this minimal example, but might be needed later
 
     total_count = sum(len(items) for items in store.values())
     logging.debug("[POST /entity.count] Total entity count: %d", total_count)
@@ -365,6 +387,10 @@ def entity_update():
     - Locates the first matching entity and applies the key-value pairs in 'updates'.
     - Returns {"stat": "ok"} whether it updates or not.
     """
+    auth_error = require_oauth_token()
+    if auth_error:
+        return auth_error
+    
     logging.debug("=== [POST /entity.update] Incoming request ===")
     data = get_request_data()
 
@@ -431,6 +457,11 @@ def entity_create():
     3. Creates the new entity and saves it in store[type_name].
     4. Returns {"id": <new_id>, "stat": "ok", "uuid": <new_uuid>}.
     """
+    auth_error = require_oauth_token()
+    if auth_error:
+        return auth_error
+    
+
     logging.debug("=== [POST /entity.create] Incoming request ===")
     data = get_request_data()
 
@@ -491,6 +522,11 @@ def entity_delete():
     3. Saves the updated store to data.json if an item was deleted.
     4. Returns {"stat": "ok"} always.
     """
+    auth_error = require_oauth_token()
+    if auth_error:
+        return auth_error
+    
+
     logging.debug("=== [POST /entity.delete] Incoming request ===")
     data = get_request_data()
     logging.debug("DEBUG - Incoming data: %s", data)

@@ -9,6 +9,33 @@
 	"item": [
 		{
 			"name": "POST /oauth/token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the JSON response body",
+							"var responseJson = pm.response.json();",
+							"",
+							"// Check if the response contains an access_token",
+							"if (responseJson && responseJson.access_token) {",
+							"    // Extract the access token",
+							"    var accessToken = responseJson.access_token;",
+							"",
+							"    // Store the access token in a Postman global variable",
+							"    pm.globals.set(\"access_token\", accessToken);",
+							"",
+							"    console.log(\"OAuth2 access token saved to globals:\", accessToken);",
+							"} else {",
+							"    console.warn(\"Access token not found in the response\");",
+							"}",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -81,6 +108,16 @@
 		{
 			"name": "POST /entity",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -113,6 +150,16 @@
 		{
 			"name": "POST /entity.find",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -145,6 +192,16 @@
 		{
 			"name": "POST /entity.count",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -177,6 +234,16 @@
 		{
 			"name": "POST /entity.update",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -209,6 +276,16 @@
 		{
 			"name": "POST /entity.create",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -241,6 +318,16 @@
 		{
 			"name": "POST /entity.delete",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
