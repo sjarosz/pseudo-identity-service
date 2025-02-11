@@ -21,8 +21,8 @@ The sample data in data.json, can be modified and the schema can as well.  The s
 
 1. **CRUD operation support**: The API supports Create, Read, Update, and Delete (CRUD) operations for the identity store.
 2. **Password Reset Support**: The update operation allows users to reset their passwords.
-3. **OAuth2 Authentication Credentials**: OAuth2 endpoint authentication credentials function with password reset.
-4. **Explicitly Trusted Authentication**: Both OAuth2 and Basic authentication credentials are explicitly trusted. Passthrough authentication is handled by updating the user password field and using OAuth2 token issuance to prove authentication.
+3. **OAuth2 Authentication Credentials**: OAuth2 endpoint authentication credentials function with password reset. Starting Password is 'P@ssw0rd', password can be changed in an update and then future calls to get token, must supply updated password.
+4. **Explicitly Trusted Token**:  OAuth2 tokens are explicitly trusted. Simulator just expects presents of a token in the header.  Postman collection handels setting and recalling required token values.
 5. **Supported API Operations**:
    - Add user
    - Delete user
