@@ -1,0 +1,598 @@
+{
+    "user": [
+        {
+            "accountDataRequestTime": "2025-01-21 12:00:00 +0000",
+            "accountDeleteRequestTime": "2025-01-21 12:30:00 +0000",
+            "birthday": "1985-05-10",
+            "clients": [
+              {
+                "clientId": "stpcjpnvrjs5nu2mmhcjxyfhyfs5tah9",
+                "firstLogin": "2025-01-21 11:07:05 +0000",
+                "id": 767769026,
+                "lastLogin": "2025-01-21 11:07:05 +0000",
+                "name": "project-alpha-client"
+              },
+              {
+                "clientId": "c3quehdqqk6h8zx3wp4kubvjkkcjvcp2",
+                "firstLogin": "2025-01-21 11:13:50 +0000",
+                "id": 767769793,
+                "lastLogin": "2025-01-21 11:46:19 +0000",
+                "name": "app-xyz-client"
+              },
+              {
+                "clientId": "kesr9nyvuj6rk7g5kaf72bud69upn935",
+                "firstLogin": "2025-01-21 11:39:22 +0000",
+                "id": 767770305,
+                "lastLogin": "2025-01-21 15:21:31 +0000",
+                "name": "service-gamma-client"
+              },
+              {
+                "clientId": "arxeyvt28kq9axfdwcnsyg4z2fwwrtf9",
+                "firstLogin": "2025-01-21 11:40:35 +0000",
+                "id": 767770435,
+                "lastLogin": "2025-01-21 11:40:35 +0000",
+                "name": "platform-delta-client"
+              },
+              {
+                "clientId": "jtw9bak83xt3jx8c95tudpu5qrhdm3kf",
+                "firstLogin": "2025-01-21 12:59:23 +0000",
+                "id": 767770945,
+                "lastLogin": "2025-01-21 12:59:23 +0000",
+                "name": "system-beta-client"
+              }
+            ],
+            "consents": {
+              "communication": {
+                "clientId": "stpcjpnvrjs5nu2mmhcjxyfhyfs5tah9",
+                "context": "Marketing",
+                "granted": true,
+                "type": "email",
+                "updated": "2025-01-21 12:05:00 +0000"
+              },
+              "cookies": {
+                "clientId": "c3quehdqqk6h8zx3wp4kubvjkkcjvcp2",
+                "context": "Tracking",
+                "granted": true,
+                "type": "functional",
+                "updated": "2025-01-21 12:10:00 +0000"
+              },
+              "data": {
+                "clientId": "kesr9nyvuj6rk7g5kaf72bud69upn935",
+                "context": "Analytics",
+                "granted": true,
+                "type": "usage",
+                "updated": "2025-01-21 12:15:00 +0000"
+              },
+              "marketing": {
+                "clientId": "arxeyvt28kq9axfdwcnsyg4z2fwwrtf9",
+                "context": "Ads",
+                "granted": false,
+                "type": "personalized",
+                "updated": "2025-01-21 12:20:00 +0000"
+              },
+              "personalization": {
+                "clientId": "jtw9bak83xt3jx8c95tudpu5qrhdm3kf",
+                "context": "UX",
+                "granted": true,
+                "type": "customization",
+                "updated": "2025-01-21 12:25:00 +0000"
+              }
+            },
+            "created": "2025-01-21 11:07:05.198327 +0000",
+            "deactivateAccount": false,
+            "display": "HSimpson",
+            "displayName": "Homer S.",
+            "email": "homer.simpson@example.com",
+            "emailVerified": "2025-01-21 11:07:05.193 +0000",
+            "externalId": "EXT123456",
+            "familyName": "Simpson",
+            "fullName": "Homer J. Simpson",
+            "gender": "Male",
+            "givenName": "Homer",
+            "id": 767769025,
+            "lastLogin": "2025-01-21 15:21:31 +0000",
+            "lastLoginWith": "traditional",
+            "lastUpdated": "2025-01-21 15:21:31.68263 +0000",
+       "legalAcceptances": [
+  {
+    "clientId": "stpcjpnvrjs5nu2mmhcjxyfhyfs5tah9",
+    "dateAccepted": "2025-01-21 11:09:00 +0000",
+    "id": 767769027,
+    "legalAcceptanceId": "privacyPolicy-work-v1"
+  },
+  {
+    "clientId": "stpcjpnvrjs5nu2mmhcjxyfhyfs5tah9",
+    "dateAccepted": "2025-01-21 11:10:30 +0000",
+    "id": 767769028,
+    "legalAcceptanceId": "dataSecurityAgreement-v1"
+  },
+
+
+  {
+    "clientId": "stpcjpnvrjs5nu2mmhcjxyfhyfs5tah9",
+    "dateAccepted": "2025-01-21 11:22:15 +0000",
+    "id": 767769031,
+    "legalAcceptanceId": "safetyGuidelines-nuclear-v2"
+  },
+  {
+    "clientId": "stpcjpnvrjs5nu2mmhcjxyfhyfs5tah9",
+    "dateAccepted": "2025-01-21 11:23:45 +0000",
+    "id": 767769032,
+    "legalAcceptanceId": "employmentAgreement-v3"
+  },
+  {
+    "clientId": "c3quehdqqk6h8zx3wp4kubvjkkcjvcp2",
+    "dateAccepted": "2025-01-21 11:25:00 +0000",
+    "id": 767769033,
+    "legalAcceptanceId": "membershipAgreement-duffBeerClub-v1"
+  },
+  {
+    "clientId": "c3quehdqqk6h8zx3wp4kubvjkkcjvcp2",
+    "dateAccepted": "2025-01-21 11:26:30 +0000",
+    "id": 767769034,
+    "legalAcceptanceId": "liabilityWaiver-chili-cookoff-v1"
+  },
+  {
+    "clientId": "stpcjpnvrjs5nu2mmhcjxyfhyfs5tah9",
+    "dateAccepted": "2025-01-21 11:30:00 +0000",
+    "id": 767769035,
+    "legalAcceptanceId": "unionMembershipAgreement-v2"
+  }
+]
+,
+            "middleName": "Jay",
+            "mobileNumber": "+1234567890",
+            "mobileNumberVerified": true,
+            "password": {
+              "created": "2025-01-21 11:36:14.630321744 +0000",
+              "type": "password-bcrypt",
+              "value": "$2b$12$xaOBzMzzOs1t2w/si8ijcOItZDAD.IMjIMtCyK1x421YZq44Ls06C"
+            },
+            "photos": [],
+            "primaryAddress": {
+              "address1": "742 Evergreen Terrace",
+              "address2": "Apt 101",
+              "city": "Springfield",
+              "company": "Springfield Nuclear Plant",
+              "country": "USA",
+              "phone": "+1234567890",
+              "stateAbbreviation": "IL",
+              "zip": "62704",
+              "zipPlus4": "1234"
+            },
+            "profiles": [
+              {
+                "domain": "facebook.com",
+                "id": 767769032,
+                "identifier": "http://www.facebook.com/profile.php?id=103460812347805763727",
+                "photo": "https://graph.facebook.com/v2.0/103460812347805763727/picture?type=large",
+                "providerSpecifier": "facebook"
+              },
+              {
+                "domain": "twitter.com",
+                "id": 767769153,
+                "identifier": "https://twitter.com/homer_simpson",
+                "photo": "https://pbs.twimg.com/profile_images/homer_simpson.jpg",
+                "providerSpecifier": "twitter"
+              },
+              {
+                "domain": "instagram.com",
+                "id": 767769665,
+                "identifier": "https://www.instagram.com/homer_simpson",
+                "photo": "https://instagram.com/homer_simpson/profile_pic",
+                "providerSpecifier": "instagram"
+              },
+              {
+                "domain": "linkedin.com",
+                "id": 767770561,
+                "identifier": "https://www.linkedin.com/in/homer-simpson",
+                "photo": "https://linkedin.com/homer_simpson/profile_pic",
+                "providerSpecifier": "linkedin"
+              }
+            ],
+            "roles": ["safety-inspector", "beer-enthusiast"],
+            "username": "homer.simpson",
+            "uuid": "abcd1234-5678-90ef-ghij-klmnopqrstuv"
+        },
+
+        {
+          
+                  "accountDataRequestTime": "2025-01-21 13:30:00 +0000",
+                  "accountDeleteRequestTime": null,
+                  "birthday": "1976-03-19",
+                  "clients": [
+                    {
+                      "clientId": "mno345pqr678",
+                      "firstLogin": "2025-01-21 13:35:20 +0000",
+                      "id": 789123456,
+                      "lastLogin": "2025-01-21 19:00:15 +0000",
+                      "name": "household-management-client"
+                    },
+                    {
+                      "clientId": "stu678vwx901",
+                      "firstLogin": "2025-01-21 13:50:45 +0000",
+                      "id": 789123457,
+                      "lastLogin": "2025-01-21 20:30:00 +0000",
+                      "name": "community-forum-client"
+                    }
+                  ],
+                  "consents": {
+                    "communication": {
+                      "clientId": "mno345pqr678",
+                      "context": "Home Maintenance Alerts",
+                      "granted": true,
+                      "type": "email",
+                      "updated": "2025-01-21 13:40:00 +0000"
+                    },
+                    "cookies": {
+                      "clientId": "stu678vwx901",
+                      "context": "Forum Preferences",
+                      "granted": true,
+                      "type": "functional",
+                      "updated": "2025-01-21 13:55:00 +0000"
+                    }
+                  },
+                  "created": "2025-01-21 13:35:20.398327 +0000",
+                  "deactivateAccount": false,
+                  "display": "MSimpson",
+                  "displayName": "Marge S.",
+                  "email": "marge.simpson@example.com",
+                  "emailVerified": "2025-01-21 13:36:10.193 +0000",
+                  "externalId": "EXT789123",
+                  "familyName": "Simpson",
+                  "fullName": "Marjorie B. Simpson",
+                  "gender": "Female",
+                  "givenName": "Marge",
+                  "id": 789123455,
+                  "lastLogin": "2025-01-21 20:30:00 +0000",
+                  "lastLoginWith": "traditional",
+                  "lastUpdated": "2025-01-21 20:30:00.68263 +0000",
+                  "legalAcceptances": [
+                    {
+                      "clientId": "mno345pqr678",
+                      "dateAccepted": "2025-01-21 13:37:00 +0000",
+                      "id": 789123458,
+                      "legalAcceptanceId": "privacyPolicy-household-v1"
+                    },
+                    {
+                      "clientId": "stu678vwx901",
+                      "dateAccepted": "2025-01-21 13:52:00 +0000",
+                      "id": 789123459,
+                      "legalAcceptanceId": "termsOfService-community-v1"
+                    },
+                    {
+                      "clientId": "stu678vwx901",
+                      "dateAccepted": "2025-01-21 13:54:30 +0000",
+                      "id": 789123460,
+                      "legalAcceptanceId": "codeOfConduct-community-v1"
+                    }
+                  ],
+                  "middleName": "Bouvier",
+                  "mobileNumber": "+1122334455",
+                  "mobileNumberVerified": true,
+                  "password": {
+                    "created": "2025-01-21 13:38:45.630321744 +0000",
+                    "type": "password-bcrypt",
+                    "value": "$2b$12$xaOBzMzzOs1t2w/si8ijcOItZDAD.IMjIMtCyK1x421YZq44Ls06C"
+                  },
+                  "photos": [],
+                  "primaryAddress": {
+                    "address1": "742 Evergreen Terrace",
+                    "address2": "",
+                    "city": "Springfield",
+                    "company": "Stay-at-home parent",
+                    "country": "USA",
+                    "phone": "+1122334455",
+                    "stateAbbreviation": "IL",
+                    "zip": "62704",
+                    "zipPlus4": "2468"
+                  },
+                  "profiles": [
+                    {
+                      "domain": "facebook.com",
+                      "id": 789123461,
+                      "identifier": "http://www.facebook.com/profile.php?id=10123456789",
+                      "photo": "https://graph.facebook.com/v2.0/10123456789/picture?type=large",
+                      "providerSpecifier": "facebook"
+                    },
+                    {
+                      "domain": "twitter.com",
+                      "id": 789123462,
+                      "identifier": "https://twitter.com/marge_simpson",
+                      "photo": "https://pbs.twimg.com/profile_images/placeholder.jpg",
+                      "providerSpecifier": "twitter"
+                    },
+                    {
+                      "domain": "instagram.com",
+                      "id": 789123463,
+                      "identifier": "https://www.instagram.com/marge_simpson",
+                      "photo": "https://instagram.com/marge_simpson/profile_pic",
+                      "providerSpecifier": "instagram"
+                    },
+                    {
+                      "domain": "pinterest.com",
+                      "id": 789123464,
+                      "identifier": "https://www.pinterest.com/margesimpson",
+                      "photo": "https://pinterest.com/margesimpson/profile_pic",
+                      "providerSpecifier": "pinterest"
+                    }
+                  ],
+                  "roles": ["parent", "community-member"],
+                  "username": "marge.simpson",
+                  "uuid": "mnop6543-2109-wxyz-qrst-abcdefghijklm"
+              },
+ 
+      
+
+    
+      
+      {
+
+                  "accountDataRequestTime": "2025-01-21 12:15:00 +0000",
+                  "accountDeleteRequestTime": null,
+                  "birthday": "2010-04-01",
+                  "clients": [
+                    {
+                      "clientId": "abc123xyz789",
+                      "firstLogin": "2025-01-21 12:17:45 +0000",
+                      "id": 567891234,
+                      "lastLogin": "2025-01-21 15:00:12 +0000",
+                      "name": "game-central-client"
+                    },
+                    {
+                      "clientId": "def456uvw321",
+                      "firstLogin": "2025-01-21 12:30:10 +0000",
+                      "id": 567891235,
+                      "lastLogin": "2025-01-21 16:45:30 +0000",
+                      "name": "school-platform-client"
+                    }
+                  ],
+                  "consents": {
+                    "communication": {
+                      "clientId": "abc123xyz789",
+                      "context": "Marketing",
+                      "granted": false,
+                      "type": "email",
+                      "updated": "2025-01-21 12:20:00 +0000"
+                    },
+                    "cookies": {
+                      "clientId": "def456uvw321",
+                      "context": "Tracking",
+                      "granted": true,
+                      "type": "functional",
+                      "updated": "2025-01-21 12:35:00 +0000"
+                    }
+                  },
+                  "created": "2025-01-21 12:17:45.398327 +0000",
+                  "deactivateAccount": false,
+                  "display": "BSimpson",
+                  "displayName": "Bart S.",
+                  "email": "bart.simpson@example.com",
+                  "emailVerified": "2025-01-21 12:18:10.193 +0000",
+                  "externalId": "EXT567891",
+                  "familyName": "Simpson",
+                  "fullName": "Bartholomew J. Simpson",
+                  "gender": "Male",
+                  "givenName": "Bart",
+                  "id": 567891233,
+                  "lastLogin": "2025-01-21 16:45:30 +0000",
+                  "lastLoginWith": "traditional",
+                  "lastUpdated": "2025-01-21 16:45:30.68263 +0000",
+                  "legalAcceptances": [
+                    {
+                      "clientId": "abc123xyz789",
+                      "dateAccepted": "2025-01-21 12:19:00 +0000",
+                      "id": 567891236,
+                      "legalAcceptanceId": "privacyPolicy-example-v1"
+                    },
+                    {
+                      "clientId": "def456uvw321",
+                      "dateAccepted": "2025-01-21 12:31:00 +0000",
+                      "id": 567891237,
+                      "legalAcceptanceId": "termsOfService-example-v1"
+                    }
+                  ],
+                  "middleName": "JoJo",
+                  "mobileNumber": "+1987654321",
+                  "mobileNumberVerified": false,
+                  "password": {
+                    "created": "2025-01-21 12:18:45.630321744 +0000",
+                    "type": "password-bcrypt",
+                    "value": "$2b$12$xaOBzMzzOs1t2w/si8ijcOItZDAD.IMjIMtCyK1x421YZq44Ls06C"
+                  },
+                  "photos": [],
+                  "primaryAddress": {
+                    "address1": "742 Evergreen Terrace",
+                    "address2": "",
+                    "city": "Springfield",
+                    "company": "Springfield Elementary",
+                    "country": "USA",
+                    "phone": null,
+                    "stateAbbreviation": "IL",
+                    "zip": "62704",
+                    "zipPlus4": "5678"
+                  },
+"profiles": [
+  {
+    "domain": "facebook.com",
+    "id": 567891240,
+    "identifier": "http://www.facebook.com/profile.php?id=998877665544332211",
+    "photo": "https://graph.facebook.com/v2.0/998877665544332211/picture?type=large",
+    "providerSpecifier": "facebook"
+  },
+  {
+    "domain": "twitter.com",
+    "id": 567891241,
+    "identifier": "https://twitter.com/bart_simpson",
+    "photo": "https://pbs.twimg.com/profile_images/bart_simpson.jpg",
+    "providerSpecifier": "twitter"
+  },
+  {
+    "domain": "instagram.com",
+    "id": 567891242,
+    "identifier": "https://www.instagram.com/bart_simpson",
+    "photo": "https://instagram.com/bart_simpson/profile_pic",
+    "providerSpecifier": "instagram"
+  },
+  {
+    "domain": "tiktok.com",
+    "id": 567891243,
+    "identifier": "https://www.tiktok.com/@bart_simpson",
+    "photo": "https://tiktok.com/bart_simpson/profile_pic",
+    "providerSpecifier": "tiktok"
+  },
+  {
+    "domain": "youtube.com",
+    "id": 567891244,
+    "identifier": "https://www.youtube.com/c/BartSimpsonPranks",
+    "photo": "https://yt3.ggpht.com/bart_simpson_channel_pic",
+    "providerSpecifier": "youtube"
+  },
+  {
+    "domain": "discord.com",
+    "id": 567891245,
+    "identifier": "https://discord.com/invite/bartpranks",
+    "photo": "https://discord.com/bart_simpson/profile_pic",
+    "providerSpecifier": "discord"
+  }
+],
+                  "roles": ["student"],
+                  "username": "bart.simpson",
+                  "uuid": "wxyz5678-1234-abcd-efgh-ijklmnopqrst"
+              },
+              {
+                "accountDataRequestTime": "2025-01-21 12:45:00 +0000",
+                "accountDeleteRequestTime": null,
+                "birthday": "2012-05-09",
+                "clients": [
+                  {
+                    "clientId": "ghi789rst456",
+                    "firstLogin": "2025-01-21 12:50:30 +0000",
+                    "id": 678912345,
+                    "lastLogin": "2025-01-21 17:30:45 +0000",
+                    "name": "education-portal-client"
+                  },
+                  {
+                    "clientId": "jkl012mno789",
+                    "firstLogin": "2025-01-21 13:15:20 +0000",
+                    "id": 678912346,
+                    "lastLogin": "2025-01-21 18:00:00 +0000",
+                    "name": "music-academy-client"
+                  }
+                ],
+                "consents": {
+                  "communication": {
+                    "clientId": "ghi789rst456",
+                    "context": "Educational Updates",
+                    "granted": true,
+                    "type": "email",
+                    "updated": "2025-01-21 12:55:00 +0000"
+                  },
+                  "cookies": {
+                    "clientId": "jkl012mno789",
+                    "context": "Tracking",
+                    "granted": true,
+                    "type": "functional",
+                    "updated": "2025-01-21 13:20:00 +0000"
+                  }
+                },
+                "created": "2025-01-21 12:50:30.398327 +0000",
+                "deactivateAccount": false,
+                "display": "LSimpson",
+                "displayName": "Lisa S.",
+                "email": "lisa.simpson@example.com",
+                "emailVerified": "2025-01-21 12:51:10.193 +0000",
+                "externalId": "EXT678912",
+                "familyName": "Simpson",
+                "fullName": "Lisa Marie Simpson",
+                "gender": "Female",
+                "givenName": "Lisa",
+                "id": 678912344,
+                "lastLogin": "2025-01-21 18:00:00 +0000",
+                "lastLoginWith": "traditional",
+                "lastUpdated": "2025-01-21 18:00:00.68263 +0000",
+                "legalAcceptances": [
+                  {
+                    "clientId": "ghi789rst456",
+                    "dateAccepted": "2025-01-21 12:52:00 +0000",
+                    "id": 678912347,
+                    "legalAcceptanceId": "privacyPolicy-education-v1"
+                  },
+                  {
+                    "clientId": "jkl012mno789",
+                    "dateAccepted": "2025-01-21 13:18:00 +0000",
+                    "id": 678912348,
+                    "legalAcceptanceId": "termsOfService-music-v1"
+                  },
+                  {
+                    "clientId": "jkl012mno789",
+                    "dateAccepted": "2025-01-21 13:19:30 +0000",
+                    "id": 678912349,
+                    "legalAcceptanceId": "studentCodeOfConduct-v1"
+                  }
+                ],
+                "middleName": "Marie",
+                "mobileNumber": null,
+                "mobileNumberVerified": false,
+                "password": {
+                  "created": "2025-01-21 12:52:45.630321744 +0000",
+                  "type": "password-bcrypt",
+                  "value": "$2b$12$xaOBzMzzOs1t2w/si8ijcOItZDAD.IMjIMtCyK1x421YZq44Ls06C"
+                },
+                "photos": [],
+                "primaryAddress": {
+                  "address1": "742 Evergreen Terrace",
+                  "address2": "",
+                  "city": "Springfield",
+                  "company": "Springfield Elementary",
+                  "country": "USA",
+                  "phone": null,
+                  "stateAbbreviation": "IL",
+                  "zip": "62704",
+                  "zipPlus4": "7890"
+                },
+    "profiles": [
+  {
+    "domain": "facebook.com",
+    "id": 678912350,
+    "identifier": "http://www.facebook.com/profile.php?id=112233445566778899",
+    "photo": "https://graph.facebook.com/v2.0/112233445566778899/picture?type=large",
+    "providerSpecifier": "facebook"
+  },
+  {
+    "domain": "twitter.com",
+    "id": 678912351,
+    "identifier": "https://twitter.com/lisa_simpson",
+    "photo": "https://pbs.twimg.com/profile_images/lisa_simpson.jpg",
+    "providerSpecifier": "twitter"
+  },
+  {
+    "domain": "instagram.com",
+    "id": 678912352,
+    "identifier": "https://www.instagram.com/lisa_simpson",
+    "photo": "https://instagram.com/lisa_simpson/profile_pic",
+    "providerSpecifier": "instagram"
+  },
+  {
+    "domain": "linkedin.com",
+    "id": 678912353,
+    "identifier": "https://www.linkedin.com/in/lisa-simpson",
+    "photo": "https://linkedin.com/lisa_simpson/profile_pic",
+    "providerSpecifier": "linkedin"
+  },
+  {
+    "domain": "medium.com",
+    "id": 678912354,
+    "identifier": "https://medium.com/@lisa_simpson",
+    "photo": "https://medium.com/lisa_simpson/profile_pic",
+    "providerSpecifier": "medium"
+  }
+],
+                "roles": ["student", "musician"],
+                "username": "lisa.simpson",
+                "uuid": "qrst9876-4321-lmno-pqrs-tuvwxyzabcd"
+            }
+
+      
+    ]
+}

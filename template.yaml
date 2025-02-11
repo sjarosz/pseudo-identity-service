@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-deployment
+  labels:
+    app: flask-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-app
+  template:
+    metadata:
+      labels:
+        app: flask-app
+    spec:
+      containers:
+      - name: flask-app
+        image: python:3.12-slim
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            pip install flask && \
+            echo "Files in /deploy-data:" && ls /deploy-data && \
+            mkdir -p /app/logs && \
+            #chmod -R 755 /deploy-data && \
+            cp /deploy-data/app.py /app/ && \
+            cp /deploy-data/data.json /app/ && \
+            echo "Files in /app:" && ls -l /app && \
+            cat /app/app.py && \
+            #while true; do sleep 100; done;
+            cd /app && FLASK_APP=app flask run --host=0.0.0.0 --port=5000;
+        ports:
+        - containerPort: 5000
+        env:
+          - name: FLASK_APP
+            value: app:app
+        volumeMounts:
+        - name: flask-app-code
+          mountPath: /deploy-data/app.py
+          subPath: app.py
+        - name: flask-app-code
+          mountPath: /deploy-data/data.json
+          subPath: data.json
+      volumes:
+      - name: flask-app-code
+        configMap:
+          name: flask-app-configmap
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-app-configmap
+  labels:
+    app: flask-app
+  annotations:
+    description: Contains Flask app code and data
+binaryData:
+  app.py: {{app}}
+  
+  data.json: {{data}}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-app-service
+  labels:
+    app: flask-app
+spec:
+  type: ClusterIP
+  selector:
+    app: flask-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: flask-app-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+      requests:
+        storage: 1Gi
