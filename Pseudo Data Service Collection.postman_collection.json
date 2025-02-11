@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "83dc9987-907d-4648-9118-7c391dd6c006",
+		"name": "Pseudo Data Service Collection",
+		"description": "Collection of endpoints (entity, entity.find, entity.count, entity.update, entity.create, entity.delete) using either JSON or x-www-form-urlencoded",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7799568"
+	},
+	"item": [
+		{
+			"name": "POST /oauth/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "P@ssw0rd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "homer.simpson@example.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eTR4Zmc2ZjQ0bXNhYzN2ZXBqanZ4Z2d6dnQzZTNzazk6OTVjY3hrN2N6YnZ1eng2ZHB0ZTVrOXA2ZGo1Ynpla3U=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "bmV3X3JlZnJlc2hfdG9rZW4=",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/oauth/token",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /entity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/entity",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"entity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /entity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eTR4Zmc2ZjQ0bXNhYzN2ZXBqanZ4Z2d6dnQzZTNzazk6OTVjY3hrN2N6YnZ1eng2ZHB0ZTVrOXA2ZGo1Ynpla3U=",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type_name\": \"user\",\n    \"attributes\": [\"email\", \"givenName\",\"familyName\",\"displayName\",\"profiles\", \"legalAcceptances\",\"uuid\"],\n    \"key_attribute\": \"email\",\n    \"key_value\": \"homer.simpson@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/entity",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"entity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /entity.find",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eTR4Zmc2ZjQ0bXNhYzN2ZXBqanZ4Z2d6dnQzZTNzazk6OTVjY3hrN2N6YnZ1eng2ZHB0ZTVrOXA2ZGo1Ynpla3U=",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type_name\": \"user\",\n    \"filter\": \"familyName='Simpson'\",\n    \"attributes\": [\"uuid\",\"id\",\"givenName\", \"middleName\", \"clients\",\"username\", \"profiles\",\"primaryAddress.city\", \"primaryAddress.stateAbbreviation\", \"legalAcceptances\"],\n    \"sort_on\": [\"familyName\", \"givenName\"]\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/entity.find",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"entity.find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /entity.count",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eTR4Zmc2ZjQ0bXNhYzN2ZXBqanZ4Z2d6dnQzZTNzazk6OTVjY3hrN2N6YnZ1eng2ZHB0ZTVrOXA2ZGo1Ynpla3U=",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{base_url}}/entity.count",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"entity.count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /entity.update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eTR4Zmc2ZjQ0bXNhYzN2ZXBqanZ4Z2d6dnQzZTNzazk6OTVjY3hrN2N6YnZ1eng2ZHB0ZTVrOXA2ZGo1Ynpla3U=",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type_name\": \"user\",\n    \"key_attribute\": \"email\",\n    \"key_value\": \"homer.simpson@example.com\",\n    \"updates\": {\n        \"displayName\": \"Homer the Awesome\",\n        \"password\": \"P@ssw0rd123\",\n        \"primaryAddress\": {\n            \"stateAbbreviation\": \"KY\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/entity.update",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"entity.update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /entity.create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eTR4Zmc2ZjQ0bXNhYzN2ZXBqanZ4Z2d6dnQzZTNzazk6OTVjY3hrN2N6YnZ1eng2ZHB0ZTVrOXA2ZGo1Ynpla3U=",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type_name\": \"user\",\n    \"attributes\": {\n      \"givenName\": \"Matt\",\n      \"familyName\": \"Parker\",\n      \"displayName\": \"Matthew Parker\",\n      \"email\": \"matt.parkerm@example.com\",\n      \"password\": \"p@ssw0rd\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/entity.create",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"entity.create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /entity.delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic eTR4Zmc2ZjQ0bXNhYzN2ZXBqanZ4Z2d6dnQzZTNzazk6OTVjY3hrN2N6YnZ1eng2ZHB0ZTVrOXA2ZGo1Ynpla3U=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type_name\": \"user\",\n    \"key_attribute\": \"email\",\n    \"key_value\": \"matt.parkerm@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/entity.delete",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"entity.delete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000"
+		}
+	]
+}
